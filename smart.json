@@ -1,0 +1,9 @@
+{
+  "name": "bulkCollectionUpdate",
+  "description": "Inserts/Updates documents in a collection in bulk",
+  "homepage": "https://github.com/udondan/meteor-bulkCollectionUpdate",
+  "author": "Daniel Phatthanan <daniel@phatthanan.com> (http://phatthanan.com/)",
+  "version": "0.1.0",
+  "license": "MIT",
+  "git": "https://github.com/udondan/meteor-bulkCollectionUpdate.git"
+}
