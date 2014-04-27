@@ -1,5 +1,5 @@
 Package.describe({
-  summary: " Bulk insert/update/delete documents in a collection",
+  summary: "Bulk insert/update/delete documents in a collection",
   environments: ['server']
 });
 
