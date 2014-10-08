@@ -8,15 +8,12 @@ By default the `_id` field is used as the primary identifier. Since this ID in m
 The delete option should not be used for really large datasets, as all documents (but only the `primaryKey` field) will be fetched from the collection!
 
 
-##Install
-The module is registered in the [Atmosphere](https://atmospherejs.com/package/bulkCollectionUpdate) repository.
-
-
-###Install via [Meteorite](http://oortcloud.github.io/meteorite/)
-
+##Installation
 ``` sh
-$ mrt add bulkCollectionUpdate
+$ meteor add udondan:bulk-collection-update
 ```
+The module is registered in the [Atmosphere](https://atmospherejs.com/udondan/bulk-collection-update) repository.
+
 
 ##Usage
 
@@ -68,7 +65,6 @@ bulkCollectionUpdate(students, data, {
     console.log("Done. Collection now has " + students.find().count() + " documents.");
   }
 });
-
 ```
 Both elements are now inserted in the collection.
 
@@ -96,7 +92,7 @@ To delete data, you need to set the option `deleteMissing` to true. By default `
 delete data[1];
 // now there is only 1 element in data left
 
-// WRONG: this will NOT work, as the option deleteMissing is missing
+// WRONG: this will NOT work, as the option deleteMissing is not set
 bulkCollectionUpdate(students, data, {
   primaryKey: "email",
   callback: function() {
@@ -124,8 +120,9 @@ bulkCollectionUpdate(students, [], {
   callback: function() {
     console.log("Done. Collection now has " + students.find().count() + " documents.");
   }
+});
 ```
-But it's not recommended to use this to clear a collection, as each document will be deleted on its own. If you want to drop all data, use `collection.remove({})` instead.
+But it's not recommended to use this to clear a collection, as each document will be deleted separately. If you want to drop all data, use `collection.remove({})` instead.
 
 
 ###Complete example for easy copy & paste
