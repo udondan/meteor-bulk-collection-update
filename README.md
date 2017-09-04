@@ -1,6 +1,8 @@
 bulkCollectionUpdate
 ===============
 
+__NO LONGER MAINTAINED__
+
 `bulkCollectionUpdate` is a quick way to update/replace the whole content of a collection with the content of an array. A use case (and why I created this) is to store a cached version of external content such as a RSS feed or the result of a JSON API which then can easily be updated (insert new, delete old and update existing documents).
 
 By default the `_id` field is used as the primary identifier. Since this ID in many cases is not contained within the source data you can define any document property as the `primaryKey`. In the below example the field `email` will be used.
